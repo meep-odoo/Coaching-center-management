@@ -1,0 +1,47 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="subject_info_action" model="ir.actions.act_window">
+        <field name="name">Subject details</field>
+        <field name="res_model">subject.info</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Tags found ! Let's create one
+            </p>
+        </field>
+    </record>
+
+    <!-- tree view     -->
+    <record id="student_property_view_tree" model="ir.ui.view">
+        <field name="name">subject.info.tree</field>
+        <field name="model">subject.info</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="subject_name"/>
+                <field name="subject_code"/>
+                <field name="subject_difficulty"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view   -->
+    <record id="estate_property_view_form" model="ir.ui.view">
+        <field name="name">subject.info.form</field>
+        <field name="model">subject.info</field>
+        <field name="arch" type="xml">
+            <form string="Subject Info">
+                <sheet>
+                    <notebook>
+                        <page string="Description">
+                            <group>
+                                <field name="subject_name"/>
+                                <field name="subject_code"/>
+                                <field name="subject_difficulty"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

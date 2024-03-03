@@ -1,0 +1,9 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<odoo>
+ <menuitem id="coaching_root_menu" name="Coaching">
+    <menuitem id="coaching_first_level_menu" name="Details">
+        <menuitem id="coaching_model_menu_action" action="Coaching_center_action"/>
+        <menuitem id="coaching_model_subject_action" action="subject_info_action"/>
+    </menuitem>
+</menuitem>
+</odoo>

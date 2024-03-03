@@ -1,0 +1,45 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="Coaching_center_action" model="ir.actions.act_window">
+        <field name="name"> Coaching center</field>
+        <field name="res_model">student.info</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Tags found ! Let's create one
+            </p>
+        </field>
+    </record>
+
+    <!-- tree view     -->
+    <record id="student_info_view_tree" model="ir.ui.view">
+        <field name="name">student.info.tree</field>
+        <field name="model">student.info</field>
+        <field name="arch" type="xml">
+            <tree string="Channel">
+                <field name="student_name"/>
+                <field name="student_roll_no"/>
+                <field name="phone_no"/>
+                <field name="class_"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view   -->
+    <record id="student_info_view_form" model="ir.ui.view">
+        <field name="name">student.info.form</field>
+        <field name="model">student.info</field>
+        <field name="arch" type="xml">
+            <form string="Student info">
+                <sheet>
+                    <group>
+                        <field name="student_name"/>
+                        <field name="student_roll_no"/>
+                        <field name="phone_no"/>
+                        <field name="class_"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
